@@ -1222,8 +1222,22 @@ section {
 #footer .credits a {
   color: #34b7a7;
 }
+/* По-малка икона */
 .small-icon {
-  font-size: 14px; /* По-малко от текущите 20px */
-  padding-right: 6px;
-  color: #34b7a7; /* за да остане същия цвят */
+  font-size: 12px;
+  color: #34b7a7;
+  margin-right: 6px;
+}
+
+/* Всеки елемент на нов ред */
+.info-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.info-list li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
 }
