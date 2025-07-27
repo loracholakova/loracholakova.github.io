@@ -41,38 +41,70 @@
   </header>
   <main id="main">
     <section id="contact" class="contact">
-      <div class="container" data-aos="fade-up">
+  <div class="container" data-aos="fade-up">
+    <div class="section-title">
+      <h2>Contact</h2>
+      <p>Let’s get in touch. I’d love to hear from you.</p>
+    </div>
 
-        <div class="section-title">
-          <h2>Contact</h2>
-          <p>Connect With Me - I’m Here to Help!</p>
-        </div>
-        <div>
-          <iframe style="border:0; width: 100%; height: 270px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2934.459600568151!2d23.223006975512313!3d42.65161501663302!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa9ca6a7ba0253%3A0x3293604d4ac29b5d!2sKnyazhevoVitosha%2C%20ul.%20%22Tsarkvishte%22%2010%2C%201619%20Sofia!5e0!3m2!1sen!2sbg!4v1714246191356!5m2!1sen!2sbg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-        <div class="row mt-5">
-          <div class="col-lg-4">
-            <div class="info">
-              <div class="address">
-                <i class="bi bi-geo-alt"></i>
-                <h4>Location:</h4>
-                <p>10 Tsarkvishte Street, Sofia, 1619</p>
-              </div>
-              <div class="email">
-                <i class="bi bi-envelope"></i>
-                <h4>Email:</h4>
-                <p>lora.cholakov@gmail.com</p>
-              </div>
-              <div class="phone">
-                <i class="bi bi-phone"></i>
-                <h4>Call:</h4>
-                <p>+359 876 509 704</p>
-              </div>
-            </div>
+    <div class="row">
+      <!-- Contact Info -->
+      <div class="col-lg-5 d-flex align-items-stretch">
+        <div class="info">
+          <div class="address">
+            <i class="bi bi-geo-alt"></i>
+            <h4>Location:</h4>
+            <p>v.z. Kiliite, Sofia, Bulgaria</p>
           </div>
+
+          <div class="email">
+            <i class="bi bi-envelope"></i>
+            <h4>Email:</h4>
+            <p>lora.cholakov@gmail.com</p>
+          </div>
+
+          <div class="phone">
+            <i class="bi bi-phone"></i>
+            <h4>Call:</h4>
+            <p>+359 876 509 704</p>
+          </div>
+
+          <!-- Google Map Embed (approximate location) -->
+          <iframe src="https://www.google.com/maps?q=v.z.+Kiliite,+Sofia,+Bulgaria&output=embed" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
         </div>
       </div>
-    </section>
+      <!-- Contact Form -->
+      <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+        <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+          <div class="row">
+            <div class="form-group col-md-6">
+              <label for="name">Your Name</label>
+              <input type="text" name="name" class="form-control" id="name" required>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="email">Your Email</label>
+              <input type="email" class="form-control" name="email" id="email" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" class="form-control" name="subject" id="subject" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea class="form-control" name="message" rows="10" required></textarea>
+          </div>
+          <div class="my-3">
+            <div class="loading">Loading</div>
+            <div class="error-message"></div>
+            <div class="sent-message">Your message has been sent. Thank you!</div>
+          </div>
+          <div class="text-center"><button type="submit">Send Message</button></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
   </main>
   <footer id="footer">
     <div class="container">
