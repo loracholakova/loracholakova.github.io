@@ -1222,3 +1222,8 @@ section {
 #footer .credits a {
   color: #34b7a7;
 }
+.small-icon {
+  font-size: 14px; /* По-малко от текущите 20px */
+  padding-right: 6px;
+  color: #34b7a7; /* за да остане същия цвят */
+}
