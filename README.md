@@ -8,21 +8,27 @@ From the repository root, run `python3 -m http.server 4173` and open <http://loc
 
 The [Portfolio overview](portfolio.html) links to [GIROTTI](girotti.html) and [AEROSUS](aerosus.html). The previous Portfolio fragment URLs still lead to the corresponding overview cards. Each case study has its own canonical URL, title, description, and Open Graph metadata. [The sitemap](sitemap.xml) lists all nine canonical URLs.
 
+## Design and content
+
+Soft Creative Studio pairs Manrope with DM Serif Display and uses blush, lavender, and sage to distinguish sections. Home introduces the work and the approved portrait, About explains the professional approach, Experience holds the verified timeline and credentials, and Expertise & Skills groups capabilities and platforms. The existing `resume.html` and `services.html` URLs serve Experience and Expertise & Skills.
+
+Platform tiles use the website owner’s confirmed inventory and previously documented tools. Marks were rasterized from [Simple Icons](https://github.com/simple-icons/simple-icons/tree/32e030086fdc605196391aab28519b14dc4295b4) and [Devicon](assets/images/platforms/LICENSE-Devicon.txt). Project marks and the workspace photograph were optimized from existing repository assets.
+
 ## University project checklist
 
 | Requirement | Verified implementation |
 | --- | --- |
 | At least five complete HTML/CSS pages | Nine standalone pages, including the seven primary pages and two complete case studies. |
-| Clear headings, paragraphs, and readable typography | Each page has one main heading, a logical heading hierarchy, and a shared typography scale. |
+| Clear headings, paragraphs, and readable typography | Each page has one main heading, a logical heading hierarchy, and a shared typography scale with Manrope and DM Serif Display. |
 | Appropriate images and balanced image and text layouts | Home and About use the approved full-frame portrait with responsive WebP sources, a JPEG fallback, reserved dimensions, and descriptive alternative text. The case studies use text cards and HTML/CSS workflow diagrams. |
 | Functional navigation and visual effects | The shared navigation works with a keyboard at desktop and mobile widths. The menu closes when focus leaves the header, and focus transfers on viewport changes. Hover and scroll effects respect reduced motion. |
 | Working contact form | The owner confirmed a real delivery to their inbox through Formspree. The audit exercised the existing HTTPS POST, native fallback, validation, focus, duplicate prevention, and response handling using intercepted requests. |
 | Contact information and contact form | Contact provides public email, phone, location, social links, and the labeled form. |
-| Internal and external hyperlinks | All 47 internal destinations and local asset paths passed. All seven references and credential issuer URLs responded. Facebook required sign-in and LinkedIn restricted the automated check. |
+| Internal and external hyperlinks | All 75 internal destinations and local asset paths passed. All seven references and credential issuer URLs responded. Facebook required sign-in and LinkedIn restricted the automated check. |
 | Relevant iframe and educational multimedia | Resources & Insights embeds the credited Google Ads video in a responsive, titled iframe and links to its official guide and watch page. The player loaded in Chrome with captions and duration. Playback progress stayed at 0:00 in the test environment. |
 | Literature and references | Resources & Insights lists and attributes documentation from Google Ads Help, Merchant Center Help, Google for Developers, Google Cloud, and W3C. |
 | Meaningful original content | The verified professional history, case studies, and practical notes cover current work, campaign methods, analytics, and accessibility. |
-| Attribution for external sources | The resources page credits its publishers and video, and About credits existing testimonials by name. The portfolio owner supplied the original portrait, and the favicon comes from the existing portfolio. Inter is distributed under the [SIL Open Font License](assets/fonts/OFL-Inter.txt). |
+| Attribution for external sources | The resources page credits its publishers and video, and About credits existing testimonials by name. The portfolio owner supplied the portrait. The workspace photo, earlier client marks, and favicon come from the original portfolio. The self-hosted fonts include their licenses for [Manrope](assets/fonts/OFL-Manrope.txt) and [DM Serif Display](assets/fonts/OFL-DM-Serif-Display.txt). |
 | Responsive layouts | All nine pages were checked at 320, 430, 768, and 1440 pixels. The short-viewport menu was also exercised at 390 × 240 pixels. |
 
 ## Technical audit
