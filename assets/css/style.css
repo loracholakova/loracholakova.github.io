@@ -114,7 +114,7 @@ li + li { margin-block-start: .35rem; }
   white-space: nowrap;
 }
 
-.nav-list a:hover, .nav-list [aria-current="page"] {
+.nav-list a:hover, .nav-list [aria-current="page"], .nav-list .nav-section-active {
   color: var(--ink);
   text-decoration: underline;
   text-underline-offset: .45em;
@@ -393,9 +393,7 @@ li + li { margin-block-start: .35rem; }
 
 .case { display: grid; gap: clamp(1.3rem, 4vw, 2.2rem); }
 
-.case-intro { display: grid; gap: .7rem; }
-
-.case-intro > p:not(.eyebrow) { max-width: 44em; }
+.case .card h2 { font-size: clamp(1.25rem, 2.1vw, 1.6rem); letter-spacing: -.034em; }
 
 .case-details {
   display: grid;
