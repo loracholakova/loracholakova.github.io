@@ -180,9 +180,9 @@ li + li { margin-block-start: .35rem; }
 
 .portrait img {
   width: 100%;
-  aspect-ratio: 1;
-  object-fit: cover;
-  object-position: center 30%;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
 }
 
 .portrait figcaption {

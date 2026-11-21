@@ -11,10 +11,10 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://loracholakova.github.io/">
   <meta property="og:site_name" content="Lora Cholakova">
-  <meta property="og:image" content="https://loracholakova.github.io/assets/img/Portrait.JPG">
-  <meta property="og:image:width" content="600">
-  <meta property="og:image:height" content="600">
-  <meta property="og:image:alt" content="Lora Cholakova in a black blazer">
+  <meta property="og:image" content="https://loracholakova.github.io/assets/images/lora-cholakova.jpg">
+  <meta property="og:image:width" content="1199">
+  <meta property="og:image:height" content="1312">
+  <meta property="og:image:alt" content="Lora Cholakova seated in a light blazer">
   <link rel="icon" type="image/png" href="assets/img/favicon-32x32.png">
   <link rel="apple-touch-icon" href="assets/img/favicon-32x32.png">
   <link rel="stylesheet" href="assets/css/style.css">
@@ -52,7 +52,12 @@
           </div>
         </div>
         <figure class="portrait">
-          <img src="assets/img/Portrait.JPG" width="600" height="600" alt="Lora Cholakova in a black blazer">
+          <picture>
+            <source type="image/webp"
+              srcset="assets/images/lora-cholakova-420.webp 420w, assets/images/lora-cholakova-840.webp 840w, assets/images/lora-cholakova-1199.webp 1199w"
+              sizes="(max-width: 27.25rem) calc(100vw - 2.25rem), (max-width: 39rem) 25rem, (max-width: 76rem) 34vw, 25.25rem">
+            <img src="assets/images/lora-cholakova.jpg" width="1199" height="1312" alt="Lora Cholakova seated in a light blazer" decoding="async" fetchpriority="high">
+          </picture>
           <figcaption><strong>Lora Cholakova</strong><span>Sofia, Bulgaria</span></figcaption>
         </figure>
       </div>
