@@ -114,24 +114,11 @@ li + li { margin-block-start: .35rem; }
 .wordmark {
   display: inline-flex;
   align-items: center;
-  gap: .65rem;
-  color: var(--ink);
-  font-weight: 800;
-  letter-spacing: -.035em;
-  text-decoration: none;
-  white-space: nowrap;
+  min-block-size: 44px;
+  width: clamp(9rem, 13vw, 10.5rem);
 }
 
-.monogram {
-  display: grid;
-  place-items: center;
-  width: 2.2rem;
-  height: 2.2rem;
-  border-radius: var(--radius-small);
-  background: var(--blush);
-  font: 400 1.05rem/1 var(--editorial);
-  letter-spacing: -.055em;
-}
+.wordmark img { width: 100%; height: auto; }
 
 .nav-list { display: flex; align-items: center; gap: .12rem; padding: 0; list-style: none; }
 .nav-list li { margin: 0; }
