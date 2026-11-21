@@ -2,8 +2,9 @@
 
 const nav = document.querySelector("#site-nav");
 const menu = document.querySelector("#menu-toggle");
+const siteHeader = menu?.closest("header");
 
-if (nav && menu) {
+if (nav && menu && siteHeader) {
   const compact = window.matchMedia("(max-width: 54rem)");
 
   function setMenu(open) {
@@ -23,7 +24,8 @@ if (nav && menu) {
     setMenu(!compact.matches);
 
     if (!compact.matches && menuHadFocus) {
-      nav.querySelector("a[aria-current='page']").focus();
+      const current = nav.querySelector("a[aria-current='page'], .nav-section-active");
+      (current ?? nav.querySelector("a"))?.focus();
     }
   }
 
@@ -31,11 +33,37 @@ if (nav && menu) {
   compact.addEventListener("change", syncNavigation);
   menu.addEventListener("click", () => setMenu(nav.hidden));
 
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && compact.matches && !nav.hidden) {
-      setMenu(false);
-      menu.focus();
+  function isMenuOpen() {
+    return compact.matches && !nav.hidden;
+  }
+
+  function closeMenu() {
+    if (nav.contains(document.activeElement)) menu.focus();
+    setMenu(false);
+  }
+
+  siteHeader.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && isMenuOpen()) {
+      event.preventDefault();
+      closeMenu();
     }
+  });
+
+  siteHeader.addEventListener("focusout", (event) => {
+    if (isMenuOpen() && event.relatedTarget && !siteHeader.contains(event.relatedTarget)) {
+      setMenu(false);
+    }
+  });
+
+  nav.addEventListener("click", (event) => {
+    if (isMenuOpen() && event.target.closest("a[href]") &&
+        event.button === 0 && !event.ctrlKey && !event.metaKey && !event.shiftKey && !event.altKey) {
+      closeMenu();
+    }
+  });
+
+  document.addEventListener("click", (event) => {
+    if (isMenuOpen() && !siteHeader.contains(event.target)) closeMenu();
   });
 }
 
